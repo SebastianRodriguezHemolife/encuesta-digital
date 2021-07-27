@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta Digital</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/style.js">
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <section>
+    <form action="personalData">
+      <label for="name">
+        <span>¿Cual es tu nombre?</span>
+        <input type="text" id="name" placeholder="escribe tu nombre" required>
+      </label>
+
+      <label for="lastName">
+        <span>¿Cual es tu apellido?</span>
+        <input type="text" id="lastaName" placeholder="escribe tu apellido" required>
+      </label>
+
+      <label for="birthdate" onchange="">
+        <span>¿Cual es tu fecha de nacimiento?</span>
+        <input type="date" id="birthdate" placeholder="escribe tu fecha de nacimiento" required>
+      </label>
+
+      <!-- Calcular edad automaticamente apartir de la fecha de nacimiento -->
+      <Label for="age">
+        <span>¿Cuantos años tienes?</span>
+        <input type="text" id="age" placeholder="escribe tu edad" required>
+      </Label>
+
+      <label for="gender">
+        <span>¿Con cual genero te identificas?</span>
+        <select name="" id="gender" required>
+          <option value="">Selecciona una opcion</option>
+          <option value="">Femenino</option>
+          <option value="">Masculino</option>
+          <option value="">Transgenero</option>
+        </select>
+      </label>
+
+      <label for="idCarType">
+        <span>¿Cual es tu tipo de documento?</span>
+        <select name="idCarType" id="" required>
+          <option value="">Selecciona una opcion</option>
+          <option value="">Cedula de Ciudadania</option>
+          <option value="">Pasaporte</option>
+          <option value="">Tarjeta de identidad</option>
+          <option value="">Numero unico de indetificacion personal</option>
+          <option value="">Cedula de extranjeria</option>
+          <option value="">Libreta militar</option>
+        </select>
+      </label>
+
+      <label for="idNumber">
+        <span>¿Cual es tu numero de documento?</span>
+        <input type="number" id="idNumber" required>
+      </label>
+
+      <label for="idCardExpeditionPlace">
+        <select name="idCardExpeditionPlace" onchange="myFuntion()" required>
+          <datalist id="idCardExpeditionPlace">
+            <option>Selecciona tu departamento</option>
+            <option value="municipioAmazonas">AMAZONAS</option>
+            <option value="municipiosAntioquia">ANTIOQUIA</option>
+            <option value="municipiosArauca">ARAUCA</option>
+            <option value="municipiosArchipielagoDeSanAndres">ARCHIPIELAGO DE SAN ANDRES</option>
+            <option value="municipiosAtlantico">ATLaNTICO</option>
+            <option value="municipiosBogota">BOGOTA</option>
+            <option value="municipiosBolivar">BOLIVAR</option>
+            <option value="municipiosBoyaca">BOYACa</option>
+            <option value="municipiosCaldas">CALDAS</option>
+            <option value="municipiosCaqueta">CAQUETA</option>
+            <option value="municipiosCasanare">CASANARE</option>
+            <option value="municipiosCauca">CAUCA</option>
+            <option value="municipiosCesar">CESAR</option>
+            <option value="municipiosChoco">CHOCO</option>
+            <option value="municipiosCordoba">CORDOBA</option>
+            <option value="municipiosCundinamarca">CUNDINAMARCA</option>
+            <option value="municipiosGuainia">GUAINIA</option>
+            <option value="municipiosGuaviare">GUAVIARE</option>
+            <option value="municipiosHuila">HUILA</option>
+            <option value="municipiosLaGuajira">LA GUAJIRA</option>
+            <option value="municipiosMagdalena">MAGDALENA</option>
+            <option value="municipiosMeta<">META</option>
+            <option value="municipiosNariño">NARIÑO</option>
+            <option value="municipiosNorteDeSantander">NORTE DE SANTANDER</option>
+            <option value="municipiosPutumayo">PUTUMAYO</option>
+            <option value="municipiosQuindio">QUINDIO</option>
+            <option value="municipiosRisaralda">RISARALDA</option>
+            <option value="municipiosSantander">SANTANDER</option>
+            <option value="municipiosSucre">SUCRE</option>
+            <option value="municipiosTolima">TOLIMA</option>
+            <option value="municipiosValleDelCauca">VALLE DEL CAUCA</option>
+            <option value="municipiosVaupes">VAUPES</option>
+            <option value="municipiosVichada">VICHADA</option>
+          </datalist>
+        </select>
+      </label>
+
+      <label for="bloodType">
+        <span>¿Cual es tu grupo sanguineo?</span>
+        <select name="bloodType" id="bloodType">
+          <option value="">Selecciona tu grupo sanguineo</option>
+          <option value="">A</option>
+          <option value="">B</option>
+          <option value="">O</option>
+          <option value="">AB</option>
+        </select>
+      </label>
+
+      <label for="rhFactor">
+        <span>¿Cual es tu factor rh?</span>
+        <select name="rhFactor" id="rhFactor">
+          <option value="">Selecciona tu factor RH</option>
+          <option value="">+</option>
+          <option value="">-</option>
+        </select>
+      </label>
+
+
+    </form>
+
+  </section>
+</body>
+
+</html>
