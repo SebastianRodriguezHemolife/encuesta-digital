@@ -7,40 +7,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Encuesta Digital</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="js/style.js">
+  <script type="text/javascript" src="js/style.js"></script>
 </head>
 
 <body>
   <header>
-
+    
   </header>
   <section>
-    <form action="personalData">
+    <form class="personalData" name="personalData">
       <label for="name">
-        <span>¿Cual es tu nombre?</span>
+        <span>¿Cual es tu nombre?</span> <span class="obligatorio"> * </span>
         <input type="text" id="name" placeholder="escribe tu nombre" required>
       </label>
 
       <label for="lastName">
-        <span>¿Cual es tu apellido?</span>
+        <span>¿Cual es tu apellido?</span> <span class="obligatorio"> * </span>
         <input type="text" id="lastaName" placeholder="escribe tu apellido" required>
       </label>
 
-      <label for="birthdate" onchange="">
-        <span>¿Cual es tu fecha de nacimiento?</span>
-        <input type="date" id="birthdate" placeholder="escribe tu fecha de nacimiento" required>
+      <label for="birthdate">
+        <span>¿Cual es tu fecha de nacimiento?</span> <span class="obligatorio"> * </span>
+        <input type="date" id="birthdate" placeholder="escribe tu fecha de nacimiento" onchange="calcularEdad()"
+          required>
       </label>
 
       <!-- Calcular edad automaticamente apartir de la fecha de nacimiento -->
       <Label for="age">
-        <span>¿Cuantos años tienes?</span>
+        <span>¿Cuantos años tienes?</span> <span class="obligatorio"> * </span>
         <input type="text" id="age" placeholder="escribe tu edad" required>
       </Label>
 
       <label for="gender">
-        <span>¿Con cual genero te identificas?</span>
+        <span>¿Con cual genero te identificas?</span> <span class="obligatorio"> * </span>
         <select name="" id="gender" required>
-          <option value="">Selecciona una opcion</option>
+          <option aria-placeholder="">Selecciona una opcion</option>
           <option value="">Femenino</option>
           <option value="">Masculino</option>
           <option value="">Transgenero</option>
@@ -48,9 +49,9 @@
       </label>
 
       <label for="idCarType">
-        <span>¿Cual es tu tipo de documento?</span>
+        <span>¿Cual es tu tipo de documento?</span> <span class="obligatorio"> * </span>
         <select name="idCarType" id="" required>
-          <option value="">Selecciona una opcion</option>
+          <option disabled="">Selecciona una opcion</option>
           <option value="">Cedula de Ciudadania</option>
           <option value="">Pasaporte</option>
           <option value="">Tarjeta de identidad</option>
@@ -61,20 +62,21 @@
       </label>
 
       <label for="idNumber">
-        <span>¿Cual es tu numero de documento?</span>
+        <span>¿Cual es tu numero de documento?</span> <span class="obligatorio"> * </span>
         <input type="number" id="idNumber" required>
       </label>
 
-      <label for="idCardExpeditionPlace">
-        <select name="idCardExpeditionPlace" onchange="myFuntion()" required>
-          <datalist id="idCardExpeditionPlace">
+      <label for="departmentList">
+        <span>¿Cual es tu departamento?</span> <span class="obligatorio"> * </span>
+        <select id="departments" onchange="crearMunicipio()" >
+          <datalist id="departmentList">
             <option>Selecciona tu departamento</option>
             <option value="municipioAmazonas">AMAZONAS</option>
             <option value="municipiosAntioquia">ANTIOQUIA</option>
             <option value="municipiosArauca">ARAUCA</option>
             <option value="municipiosArchipielagoDeSanAndres">ARCHIPIELAGO DE SAN ANDRES</option>
             <option value="municipiosAtlantico">ATLaNTICO</option>
-            <option value="municipiosBogota">BOGOTA</option>
+            <option value="municipiosBogota">BOGOTA D.C.</option>
             <option value="municipiosBolivar">BOLIVAR</option>
             <option value="municipiosBoyaca">BOYACa</option>
             <option value="municipiosCaldas">CALDAS</option>
@@ -106,10 +108,19 @@
         </select>
       </label>
 
+      <label for="municipalityListlabel">
+        <span>¿Cual es tu municipio?</span> <span class="obligatorio"> * </span>
+        <select id="municipalityList" >
+          <datalist id="municipalityList">
+    
+          </datalist>
+        </select>
+      </label>
+
       <label for="bloodType">
-        <span>¿Cual es tu grupo sanguineo?</span>
+        <span>¿Cual es tu grupo sanguineo?</span> <span class="obligatorio"> * </span>
         <select name="bloodType" id="bloodType">
-          <option value="">Selecciona tu grupo sanguineo</option>
+          <option aria-placeholder="">Selecciona tu grupo sanguineo</option>
           <option value="">A</option>
           <option value="">B</option>
           <option value="">O</option>
@@ -118,13 +129,19 @@
       </label>
 
       <label for="rhFactor">
-        <span>¿Cual es tu factor rh?</span>
+        <span>¿Cual es tu factor rh?</span> <span class="obligatorio"> * </span>
         <select name="rhFactor" id="rhFactor">
-          <option value="">Selecciona tu factor RH</option>
+          <option aria-placeholder="">Selecciona tu factor RH</option>
           <option value="">+</option>
           <option value="">-</option>
         </select>
       </label>
+
+
+
+      <button type="submit" name="sendform" id="enviar">
+        <p>Siguiente</p>
+      </button>
 
 
     </form>

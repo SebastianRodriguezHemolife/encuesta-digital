@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+.personalData {
+  align-items: center;
+  justify-content: center;
+  width: 460px;
+  height: auto;
+  /* margin: 50px auto; */
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #edf2f4;
+  padding-left: 30px;
+}
+
+body {
+background: hsla(192, 83%, 53%, 1);
+
+background: linear-gradient(135deg, hsla(192, 83%, 53%, 1) 0%, hsla(355, 85%, 63%, 1) 100%);
+
+background: -moz-linear-gradient(135deg, hsla(192, 83%, 53%, 1) 0%, hsla(355, 85%, 63%, 1) 100%);
+
+background: -webkit-linear-gradient(135deg, hsla(192, 83%, 53%, 1) 0%, hsla(355, 85%, 63%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#23C3EB", endColorstr="#f1515e", GradientType=1 );
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0F7B", endColorstr="#F89B29", GradientType=1 );
+  width: 90%;
+  height: 100%;
+  margin: auto auto;
+}
+
+input,
+select {
+  background-color: #fbfbfb;
+  width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  float: center;
+}
+
+span {
+  color: #333333;
+}
+.obligatorio {
+  color: #e91010ee;
+}
+
+::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: #ab449371;
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+}
+
+.personalData input:focus, select:focus {
+  outline: 0;
+  border: 2px solid #60d394;
+}
+
+button:hover {
+  border-color: #ab4493;
+}
+
